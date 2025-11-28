@@ -18,3 +18,37 @@
 .app-title {
   margin-top: 0px;
 }
+
+.main-card-layout {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 75px;
+  margin-top: 20px;
+}
+
+.weather-card {
+  background-color: #efe696;
+  width: 300px;
+  padding: 20px;
+  border-radius: 18px;
+  border: 2px solid black;
+  text-align: left;
+}
+
+.details-container {
+  width: 200px;
+  padding: 20px;
+  border-radius: 18px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0;
+}
+
+.icon {
+  width: 125px;
+  margin-left: 50px;
+}

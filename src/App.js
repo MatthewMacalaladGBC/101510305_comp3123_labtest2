@@ -2,6 +2,8 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { buildWeatherUrl } from './api';
+import WeatherCard from './components/WeatherCard';
+import WeatherDetails from "./components/WeatherDetails";
 
 function App() {
   const [city, setCity] = useState('Toronto');
@@ -39,21 +41,15 @@ function App() {
       <div className='app-container'>
         <h1 className="app-title">Weather App</h1>
 
-        <select
-          value={city}
-          onChange={(val) => setCity(val.target.value)}
-        >
-          {cities.map((cityName) => (
-            <option key={cityName} value={cityName}>
-              {cityName}
-            </option>
-          ))}
-        </select>
+        <div className='main-card-layout'>
+          {weather && <WeatherCard data={weather} />} 
 
-        <button onClick={() => setCity(city)}>
-          Select City
-        </button>
-
+          <WeatherDetails
+            cities={cities}
+            onSelectCity={setCity}
+            data={weather}
+          />
+        </div>
       </div>
     </div>
   );
