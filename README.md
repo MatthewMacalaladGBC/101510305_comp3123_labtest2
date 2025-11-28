@@ -9,4 +9,4 @@ The URL for the chosen API is:
 
 ## Here is the output of my created app
 
-![Screenshot of my app's output](images/weather_app_output.png)
+![Screenshot of my app's output](src/images/weather_app_output.png)
